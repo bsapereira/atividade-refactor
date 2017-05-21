@@ -1,0 +1,38 @@
+@mixin theme($theme, $color){
+	.modal-#{$theme}{
+		.modal-header{
+			background-color: $color;
+		}
+		.modal-header .close{
+			color: #fff;
+			opacity: 1;
+		}
+		.modal-title{
+			background-color: #fff;
+			color: $color;
+		}
+		.main-message{
+			color: $color;
+		}
+		.secondary-message{
+			color: #ccc;
+		}
+		.modal-footer .btn{
+			background-color: #fff;
+			color: $color;
+			border-color: $color;
+		}	
+	}
+
+	.btn-#{$theme}{
+		background-color: $color;
+	}
+}
+	
+
+/* Include de mixins */
+@include theme("success", #27ae60);
+@include theme("primary", #2980b9);
+@include theme("danger", #c0392b);
+@include theme("warning", #e67e22);
+@include theme("info", #7f8c8d);

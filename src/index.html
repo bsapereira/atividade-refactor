@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Modal</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="https://use.fontawesome.com/edb7226a35.js"></script>
+
+	<style>
+
+		/* Modify */
+		.modal-header{
+			justify-content: center;
+		}
+		.modal-header .close{
+			position: absolute;
+			top: 5px;
+			right: 5px;
+		}
+		.modal-title{
+			display:flex;
+			justify-content: center;
+			align-items: center;
+			width: 1.5em;
+			height: 1.5em;
+		}
+		.modal-body{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		.secondary-message{
+			padding: 10px;
+		}
+		.modal-footer{
+			justify-content: center;
+		}
+		/* Style */
+		.modal-content{
+			border: 0;
+			border-radius: 0;
+		}		
+		.modal-title{
+			border-radius: 50%;
+			font-size: 1.5em;
+		}		
+		.main-message{
+			font-size: 1.8em;
+			font-weight: bold;
+		}
+		.modal-footer{
+			border: 0;
+		}
+		.modal-footer .btn{
+			border-radius: 0;
+			font-size: 0.8em;
+			text-transform: uppercase;
+		}
+	</style>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+		<div class="container">
+		<br><br>
+		<!-- Button trigger modal -->
+		<button type="button" class="btn btn-success" data-toggle="modal" data-target="#success">
+		  Success
+		</button>
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#primary">
+		  Primary
+		</button>
+		<button type="button" class="btn btn-info" data-toggle="modal" data-target="#info">
+		  Info
+		</button>
+		<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#danger">
+		  Danger
+		</button>
+		<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#warning">
+		  Warning
+		</button>
+
+		</div>
+
+		<!-- Modal Success-->
+		<div class="modal" id="success" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content modal-success">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="exampleModalLabel">
+		        	<i class="fa fa-check" aria-hidden="true"></i>
+				</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+		        <div class="main-message">
+		        	Great!
+		        </div>
+		        <div class="secondary-message">
+		        	Your data has been successfully saved.
+		        </div>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Back to my work</button>
+		        <button type="button" class="btn btn-primary">Back to Store Hours</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+		<!-- Modal Primary-->
+		<div class="modal" id="primary" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content modal-primary">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="exampleModalLabel">
+		        	<i class="fa fa-check" aria-hidden="true"></i>
+				</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+		        <div class="main-message">
+		        	Great!
+		        </div>
+		        <div class="secondary-message">
+		        	Your data has been successfully saved.
+		        </div>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Back to my work</button>
+		        <button type="button" class="btn btn-primary">Back to Store Hours</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+		<!-- Modal Info-->
+		<div class="modal" id="info" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content modal-info">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="exampleModalLabel">
+		        	<i class="fa fa-check" aria-hidden="true"></i>
+				</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+		        <div class="main-message">
+		        	Just saying :)
+		        </div>
+		        <div class="secondary-message">
+		        	Your data has been successfully saved.
+		        </div>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Back to my work</button>
+		        <button type="button" class="btn btn-primary">Back to Store Hours</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+		<!-- Modal Danger-->
+		<div class="modal" id="danger" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content modal-danger">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="exampleModalLabel">
+		        	<i class="fa fa-check" aria-hidden="true"></i>
+				</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+		        <div class="main-message">
+		        	Error!
+		        </div>
+		        <div class="secondary-message">
+		        	Your data has not been saved successfully!
+		        </div>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Back to my work</button>
+		        <button type="button" class="btn btn-primary">Back to Store Hours</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+		<!-- Modal Warning-->
+		<div class="modal" id="warning" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content modal-warning">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="exampleModalLabel">
+		        	<i class="fa fa-check" aria-hidden="true"></i>
+				</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+		        <div class="main-message">
+		        	Ops...
+		        </div>
+		        <div class="secondary-message">
+		        	Looks like you data has not been successfully stored!
+		        </div>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Back to my work</button>
+		        <button type="button" class="btn btn-primary">Back to Store Hours</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+		
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/tether.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
